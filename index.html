@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Hackathon Scoring System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Roboto Mono"', 'monospace'],
+              heading: ['"Press Start 2P"', 'cursive'],
+            },
+            colors: {
+              'primary': '#00f5ff', // Electric Cyan
+              'accent': '#ff00ff', // Hot Pink / Magenta
+              'danger': '#ff3333', // Neon Red
+              'dark-bg': '#1a052a',
+              'secondary-bg': '#2c1044',
+              'light-text': '#e0d8ff',
+            },
+            textShadow: {
+              'glow-accent': '0 0 8px theme(colors.accent)',
+              'glow-primary': '0 0 8px theme(colors.primary)',
+            },
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0-rc.3",
+    "react/jsx-runtime": "https://esm.sh/react@19.0.0-rc.3/jsx-runtime",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0-rc.3/client",
+    "react-router-dom": "https://esm.sh/react-router-dom@6",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "@vercel/postgres": "https://esm.sh/@vercel/postgres@^0.10.0",
+    "@vercel/node": "https://esm.sh/@vercel/node@^5.3.13"
+  }
+}
+</script>
+<!-- Add Babel Standalone to enable in-browser TSX/JSX transpilation -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+  <body class="bg-dark-bg text-light-text">
+    <div id="root"></div>
+    <!-- Change script type to text/babel for Babel to transpile it -->
+    <script type="text/babel" data-type="module" src="/index.tsx"></script>
+  </body>
+</html>
